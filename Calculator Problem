@@ -1,0 +1,31 @@
+from art import logo
+print(logo)
+def addition(num1,num2):
+  return num1+num2
+def subtraction(num1,num2):
+  return num1-num2
+def multiply(num1,num2):
+  return num1*num2
+def divide(num1,num2):
+  return num1/num2
+def calculator():
+  num1=float(input("What is the 1st num?"))
+  while 3>0:
+    operations={"+":addition,"-":subtraction,"*":multiply,"/":divide}
+    num2=float(input("What is the 2nd num?"))
+    ask_operation=input("Choose +,-,*,/:")
+    calc_func=operations[ask_operation]
+    answer=calc_func(num1,num2)
+    print(answer)
+    ask_user=input("Type y for continuing and n for exiting:")
+    if ask_user=="y":
+      num1=answer
+    elif ask_user=="n":
+      calculator()
+calculator()
+  
+  
+  
+  
+
+  
